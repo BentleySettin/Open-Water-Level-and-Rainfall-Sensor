@@ -1,9 +1,7 @@
 #include "Particle.h"
 #include "oled-wing-adafruit.h"
 
-//------------------Turn off cellular for prelim testing; turn on for deployment
-SYSTEM_MODE(MANUAL); // uncomment for prelim testing
-//SYSTEM_MODE(SEMI_AUTOMATIC); // uncomment for deployment
+SYSTEM_MODE(MANUAL); 
 SYSTEM_THREAD(ENABLED);
 
 //------------------Maxbotix sensor
@@ -69,6 +67,6 @@ void loop() {
     display.println("ADC Value:");
     display.println(distance_unconverted);
     display.display(); 
-    delay(1000); 
+    delay(100); 
 }
 
